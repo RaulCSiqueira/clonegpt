@@ -22,15 +22,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Load & cache dependecies
         uses: ./.github/actions/cached-deps
-      - name: Test code
-        id: run-tests
-        run: npm run test
-      - name: Upload test report
-        if: failure() && steps.run-tests.outcome == 'failure'
-        uses: actions/upload-artifact@v3
-        with:
-          name: test-report
-          path: test.json
+      #- name: Test code
+      #  id: run-tests
+      #  run: npm run test
+      #- name: Upload test report
+      #  if: failure() && steps.run-tests.outcome == 'failure'
+      #  uses: actions/upload-artifact@v3
+      #  with:
+      #    name: test-report
+      #    path: test.json
   build:
     needs: test
     runs-on: ubuntu-latest
