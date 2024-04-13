@@ -65,7 +65,7 @@ jobs:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }} #access key id for aws s3
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }} #access key password for aws s3
         with:
-          bucket: teste-123-123 # name of the s3 bucket
+          bucket: teste-teste-12345 # name of the s3 bucket
           dist-folder: ./dist
           # ducket-region: us-east-2
       - name: Output information
